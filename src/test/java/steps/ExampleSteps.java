@@ -11,7 +11,7 @@ import Impl.BrowserHelper;
 
 public class ExampleSteps {
 
-    //Implementatie implementatie aaaaa;
+    //Implementatie implementatie aaaaaaaa;
     Implementatie implementatie = new Implementatie();
 
     @Given("^I am on the homepage and click on cars$")
