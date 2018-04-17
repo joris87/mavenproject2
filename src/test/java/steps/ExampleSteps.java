@@ -11,13 +11,13 @@ import Impl.BrowserHelper;
 
 public class ExampleSteps {
 
-    //Implementatie implementatie aaaaaaaaaa;
-    Implementatie implementatie = new Implementatie();
+    //Implementatie implementatie;
+    private Implementatie implementatie = new Implementatie();
 
     @Given("^I am on the homepage and click on cars$")
     public void iAmOnTheHomepageAndClickOnCars() {
         //implementatie = new Implementatie();
-        implementatie.gaNaarCukeWorkshopPagina();
+        implementatie.gaNaarDeWebsite();
     }
 
     @When("^i choose all the required details$")
