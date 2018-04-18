@@ -27,7 +27,7 @@ public class ExampleSteps {
         implementatie.clickonbutton("//*[@id=\"s2id_autogen6\"]/a");
         implementatie.typetext("//*[@id=\"select2-drop\"]/div/input","Amsterdam");
         //onderstaande werkt niet, kan specifieke 'Amsterdam downtown' element niet vinden
-        implementatie.clickindropdown("\"//*[@id=\\\"select2-drop\\\"]/ul/li[2]/div/span\"");
+        //implementatie.clickindropdown("\"//*[@id=\\\"select2-drop\\\"]/ul/li[2]/div/span\"");
     }
 
     @Then("^I should be able to view details and search result$")
