@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 @CucumberOptions(
         features="src/test/Resources/Features",
         glue ={"classpath:steps"},
-        tags = {"@Joris", "@henk"},
+//        tags = {"@Joris", "@henk"},
         format = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber-pretty",
