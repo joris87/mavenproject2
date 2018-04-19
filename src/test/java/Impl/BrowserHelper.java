@@ -5,9 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import Impl.Implementatie;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
 
 public class BrowserHelper {
     private WebDriver webDriver;
@@ -47,15 +51,17 @@ public class BrowserHelper {
         webDriver.findElement(By.xpath(s)).sendKeys(input);
     }
     public void klikindropdown(String s){
-        //WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(s)));
-        //webDriver.findElement(By.xpath(s)).click();
-//        WebElement departurePlace;
-//        departurePlace = webDriver.findElement(By.xpath(s));
-//        String text = departurePlace.getText();
-//        System.out.println(text);
-        //controleer of het goede elemement is geselecteerd
-        String tekst = webDriver.findElement(By.xpath(s)).getAttribute("textContent");
-        System.out.println(tekst);
-    }
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(s)));
+        webDriver.findElement(By.cssSelector(s)).click();
 
-}
+    }
+//    public action extends AbstractAction;
+////    Actions actions = new Actions(webDriver);
+////    actions.moveToElement(element);
+////    actions.click();
+////    actions.sendKeys("SOME DATA");
+////    actions.build().perform();
+
+
+
+    }
