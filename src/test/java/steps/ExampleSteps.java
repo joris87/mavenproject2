@@ -17,7 +17,7 @@ public class ExampleSteps {
     @Given("^I am on the homepage and click on cars$")
     public void iAmOnTheHomepageAndClickOnCars() {
         //implementatie = new Implementatie();
-        implementatie.gaNaarCukeWorkshopPagina();
+        implementatie.gaNaarPHP();
         implementatie.clickonbutton("//*[@id=\"body-section\"]/div[1]/div/div/div[1]/div/ul/li[4]/a");
     }
 
@@ -37,9 +37,9 @@ public class ExampleSteps {
         //click on time of choice
         implementatie.clickindropdown("#CARTRAWLER > form > div:nth-child(3) > div > select > option:nth-child(17)");
         //click on drop off button
-        implementatie.clickindropdown("#s2id_autogen8 > a > span.select2-chosen");
+        implementatie.clickindropdown("#s2id_autogen8 > a:nth-child(1) > span:nth-child(1)");
         //type in keyword
-        implementatie.typetext("//*[@id=\"s2id_autogen8\"]/a/span[1]","Amsterdam");
+        implementatie.typetextcss("#select2-drop > div:nth-child(1) > input:nth-child(1)","Amsterdam");
         //click on zuidoost
         implementatie.clickindropdown("#select2-drop > ul > li:nth-child(6)");
 
@@ -47,6 +47,7 @@ public class ExampleSteps {
 
     @Then("^I should be able to view details and search result$")
     public void iShouldBeAbleToViewDetailsAndSearchResult() {
-
+        //click on search button by css selector
+        implementatie.clickonbuttoncss("input.btn");
     }
 }

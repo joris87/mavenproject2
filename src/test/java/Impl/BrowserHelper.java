@@ -39,10 +39,13 @@ public class BrowserHelper {
     }
 
     public void klikelement(String s) {
-//        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(s)));
-//        webDriver.findElement(By.cssSelector(s)).click();
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(s)));
         webDriver.findElement(By.xpath(s)).click();
+    }
+
+    public void klikelementcss(String s) {
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(s)));
+        webDriver.findElement(By.cssSelector(s)).click();
     }
     public void assertion(String s){
         Assert.assertTrue("cars input field not loaded",webDriver.findElement(By.cssSelector(s))!=null);
@@ -50,9 +53,18 @@ public class BrowserHelper {
     public void typetekst(String s, String input){
         webDriver.findElement(By.xpath(s)).sendKeys(input);
     }
+
+    public void typetekstcss(String s, String input){
+        webDriver.findElement(By.cssSelector(s)).sendKeys(input);
+    }
     public void klikindropdown(String s){
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(s)));
         webDriver.findElement(By.cssSelector(s)).click();
+    }
+
+    public void klikindropdownxpath(String s) {
+            WebElement divClick = webDriver.findElement(By.xpath(s));
+            divClick.click();
 
     }
 //    public action extends AbstractAction;
@@ -62,6 +74,14 @@ public class BrowserHelper {
 ////    actions.sendKeys("SOME DATA");
 ////    actions.build().perform();
 
+    public void selecteeroptie (String s, String input) {
+        WebElement grab = webDriver.findElement(By.xpath(s));
+        grab.sendKeys(input);
+        webDriver.findElement(By.cssSelector("#select2-drop > ul > li > div > span")).click();
 
+    }
+    public void afsluiten() {
+        webDriver.close();
+    }
 
     }
